@@ -1,8 +1,10 @@
 const Button = require('../index');
 
-const button0 = new Button(0);
-const button1 = new Button(1);
-button0.on('pressed', () => console.log('pressed 0'));
-button0.on('released', () => console.log('released 0'));
-button1.on('pressed', () => console.log('pressed 1'));
-button1.on('released', () => console.log('released 1'));
+const buttonA = new Button(0);
+const buttonB = new Button(1);
+buttonA.on('pressed', () => console.log('button A pressed'));
+buttonA.on('released', () => console.log('button A released'));
+buttonA.on('changed', (value) => console.log('button A value is :', value));
+buttonB.on('pressed', () => console.log('button B pressed'));
+buttonB.on('released', () => console.log('button B released'));
+buttonB.on('changed', (value) => console.log('button B value is :', value));

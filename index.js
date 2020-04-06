@@ -11,6 +11,7 @@ class Button extends events {
     });
     this._py.stdout.on('data', (_data) => {
       const data = parseInt(_data, 10);
+      this.emit('changed', parseInt(_data, 10));
       if (data === 1) {
         this.emit(!pullUp ? 'pressed' : 'released');
       } else if (data === 0) {
