@@ -13,9 +13,9 @@ class Button extends events {
       const data = parseInt(_data, 10);
       this.emit('changed', parseInt(_data, 10));
       if (data === 1) {
-        this.emit(!pullUp ? 'pressed' : 'released');
+        this.emit(!pullUp ? 'released' : 'pressed');
       } else if (data === 0) {
-        this.emit(pullUp ? 'pressed' : 'released');
+        this.emit(pullUp ? 'released' : 'pressed');
       }
     });
   }
